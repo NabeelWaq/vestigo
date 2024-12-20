@@ -17,6 +17,8 @@ export const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState('');
     const backend_url = import.meta.env.VITE_BACKEND_URL;
+    console.log(backend_url);
+    
 
     const navigate = useNavigate();
 
