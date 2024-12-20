@@ -107,11 +107,6 @@ export const verifyStripe = async (req, res) => {
     }
 }
 
-// Placing orders using Razorpay Method
-export const placeOrderRazorpay = async (req, res) => {
-
-}
-
 // All orders data for admin panel
 export const allOrders = async (req, res) => {
     try {
@@ -145,12 +140,6 @@ try {
     console.log(error.message);
     return res.json({success:false, message:error.message});
 }
-}
-
-
-// Placing orders using Paypal Method
-export const placeOrderPaypal = async (req, res) => {
-  
 }
 
 
