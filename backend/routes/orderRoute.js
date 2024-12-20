@@ -1,5 +1,5 @@
 import express from 'express';
-import {allOrders, placeOrder, placeOrderStripe, updateStatus, userOrders, placeOrderPaypal, verifyStripe} from '../controllers/orderController.js';
+import {allOrders, placeOrder, placeOrderStripe, updateStatus, userOrders, verifyStripe} from '../controllers/orderController.js';
 import adminAuth from '../middlewares/adminAuth.js';
 import authUser from '../middlewares/auth.js';
 
