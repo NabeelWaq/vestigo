@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export const ShopContext = createContext();
 
-const ShopContextProvider = (props) => {
+export const ShopContextProvider = (props) => {
     const currency = "$";
     const deliveryFee = 10;
     const [search, setSearch] = useState('');
@@ -156,4 +156,3 @@ const ShopContextProvider = (props) => {
     )
 }
 
-export default ShopContextProvider;
