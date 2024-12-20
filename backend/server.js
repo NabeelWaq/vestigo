@@ -12,9 +12,6 @@ import orderRouter from './routes/orderRoute.js';
 const app = express();
 const port = process.env.PORT || 4000;
 
-connectDB();
-connectCLOUDINARY();
-
 // middlewares
 app.use(express.json());
 app.use(cors());
@@ -26,6 +23,18 @@ app.use('/api/cart', cartRouter);
 app.use('/api/order', orderRouter);
 
 
-app.listen(port,()=>{
-    console.log(`server running on port ${port}`);
-})
+const startServer = async () => {
+    try {
+      await connectDB();
+      connectCLOUDINARY();
+  
+      app.listen(port, () => {
+        console.log(`Server running on port ${port}`);
+      });
+    } catch (error) {
+      console.error('Error starting the server', error);
+    }
+  };
+  
+  startServer();
+  
