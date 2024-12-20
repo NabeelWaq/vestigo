@@ -28,8 +28,8 @@ const startServer = async () => {
       await connectDB();
       connectCLOUDINARY();
   
-      app.listen(port, () => {
-        console.log(`Server running on port ${port}`);
+      app.listen(() => {
+        console.log(`Server running on port`);
       });
     } catch (error) {
       console.error('Error starting the server', error);
